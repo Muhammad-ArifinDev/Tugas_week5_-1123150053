@@ -34,7 +34,35 @@ class MyHome extends StatelessWidget {
           SizedBox(width: 20),
         ],
       ),
-      
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Container pertama (teks)
+          Container(
+            width: 100,
+            height: 100,
+            alignment: Alignment.center,
+            margin: const EdgeInsets.only(top: 30, left: 20),
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+                colors: [Colors.blue, Colors.yellow],
+              ),
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            child: const Text(
+              "Ini adalah text di dalam container",
+              textAlign: TextAlign.center,
+            ),
+          ),
+
+          
+
+          
+        ],
+      ),
     );
   }
 }
