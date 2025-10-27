@@ -58,7 +58,26 @@ class MyHome extends StatelessWidget {
             ),
           ),
 
-          
+          // Container kedua (miring)
+          Container(
+            width: 170,
+            height: 150,
+            alignment: Alignment.center,
+            margin: const EdgeInsets.only(top: 30, left: 20),
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+                colors: [Colors.red, Colors.white],
+              ),
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            transform: Matrix4.rotationZ(0.1),
+            child: const Text(
+              "Ini adalah text dengan container miring",
+            ),
+          ),
 
           
         ],
