@@ -12,7 +12,29 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Judul Aplikasi",
+      home: MyHome(),
+    );
+  }
+}
 
+class MyHome extends StatelessWidget {
+  const MyHome({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Dashboard"),
+        backgroundColor: const Color.fromARGB(255, 255, 7, 7),
+        actions: const [
+          Icon(Icons.person, color: Colors.white),
+          SizedBox(width: 10),
+          Icon(Icons.account_tree, color: Colors.white),
+          Icon(Icons.ac_unit, color: Colors.white),
+          SizedBox(width: 20),
+        ],
+      ),
+      
     );
   }
 }
