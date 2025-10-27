@@ -79,7 +79,36 @@ class MyHome extends StatelessWidget {
             ),
           ),
 
-          
+          // Container ketiga (gambar)
+            Container(
+              width: 160,
+              height: 160,
+              alignment: Alignment.center,
+              margin: const EdgeInsets.only(top: 30, left: 20),
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [Colors.purple, Colors.orange],
+                ),
+                borderRadius: BorderRadius.circular(15.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.3), // ✅ diperbaiki
+                    spreadRadius: 3,
+                    blurRadius: 6,
+                    offset: const Offset(3, 3),
+                  ),
+                ],
+              ),
+              transform: Matrix4.rotationZ(0.1),
+              child: Image.asset(
+                'assets/images/image.png', // pastikan path benar
+                width: 100,
+                height: 100,
+                fit: BoxFit.cover,
+              ),
+            ),
         ],
       ),
     );
